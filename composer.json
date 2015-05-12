@@ -1,0 +1,26 @@
+{
+    "name": "shadowhand/oauth2-demos",
+    "description": "Demo of League OAuth2 clients",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Woody Gilk",
+            "email": "woody.gilk@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "League\\OAuth2\\Client\\Demo\\": "src/"
+        }
+    },
+    "require": {
+        "league/oauth2-client": "~1.0",
+        "league/oauth2-facebook": "dev-master",
+        "league/oauth2-google": "dev-master",
+        "vlucas/phpdotenv": "~1.1@dev",
+        "alexbilbie/proton": "~1.5@dev",
+        "league/plates": "~3.0@dev",
+        "guzzlehttp/guzzle": "~5.0@dev"
+    }
+}
