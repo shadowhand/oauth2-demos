@@ -15,12 +15,9 @@
         }
     },
     "require": {
-        "league/oauth2-client": "~1.0",
-        "league/oauth2-facebook": "dev-master",
-        "league/oauth2-google": "dev-master",
-        "vlucas/phpdotenv": "~1.1@dev",
-        "alexbilbie/proton": "~1.5@dev",
+        "league/oauth2-google": "~1.0",
+        "sparkphp/spark": "dev-master",
         "league/plates": "~3.0@dev",
-        "guzzlehttp/guzzle": "~5.0@dev"
+        "josegonzalez/dotenv": "dev-master"
     }
 }

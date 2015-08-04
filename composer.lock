@@ -1,48 +1,36 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5d843d3178aa284deab6741e1867391b",
+    "hash": "bbef041842d90c7e0c0384734130c71b",
     "packages": [
         {
-            "name": "alexbilbie/proton",
-            "version": "dev-master",
+            "name": "arbiter/arbiter",
+            "version": "1.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/alexbilbie/Proton.git",
-                "reference": "f9e1e77696f80f4a8bd2df64f62ade849227ea43"
+                "url": "https://github.com/arbiterphp/Arbiter.Arbiter.git",
+                "reference": "8deb1bb91bc62d604b106deea2b20fd479c076d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alexbilbie/Proton/zipball/f9e1e77696f80f4a8bd2df64f62ade849227ea43",
-                "reference": "f9e1e77696f80f4a8bd2df64f62ade849227ea43",
+                "url": "https://api.github.com/repos/arbiterphp/Arbiter.Arbiter/zipball/8deb1bb91bc62d604b106deea2b20fd479c076d1",
+                "reference": "8deb1bb91bc62d604b106deea2b20fd479c076d1",
                 "shasum": ""
             },
             "require": {
-                "league/container": "~1.0",
-                "league/event": "~2.1",
-                "league/route": "~1.0",
-                "monolog/monolog": "~1.12",
-                "php": ">=5.4.0",
-                "symfony/http-kernel": "~2.5"
-            },
-            "conflict": {
-                "symfony/http-kernel": ">=2.6.0,<2.6.6"
+                "php": ">=5.5.0",
+                "psr/http-message": "~1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "zendframework/zend-diactoros": "~1.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.5-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Proton\\": "src/"
+                    "Arbiter\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -51,117 +39,123 @@
             ],
             "authors": [
                 {
-                    "name": "Alex Bilbie",
-                    "email": "hello@alexbilbie.com"
+                    "name": "Arbiter.Arbiter Contributors",
+                    "homepage": "https://github.com/arbiterphp/Arbiter.Arbiter/contributors"
                 }
             ],
-            "description": "Micro PHP framework",
-            "homepage": "https://github.com/alexbilbie/proton",
+            "description": "A PSR-7 Action system for Action-Domain-Responder.",
+            "homepage": "https://github.com/arbiterphp/Arbiter.Arbiter",
             "keywords": [
-                "HttpKernelInterface",
-                "StackPHP",
-                "framework",
-                "micro",
+                "action domain responder",
+                "adr",
                 "middleware",
-                "proton"
-            ],
-            "time": "2015-04-05 11:25:14"
-        },
-        {
-            "name": "egeloen/http-adapter",
-            "version": "0.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/egeloen/ivory-http-adapter.git",
-                "reference": "a1a5ef1269c5657dd9bac0bd7e999ae09f36485f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/egeloen/ivory-http-adapter/zipball/a1a5ef1269c5657dd9bac0bd7e999ae09f36485f",
-                "reference": "a1a5ef1269c5657dd9bac0bd7e999ae09f36485f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "psr/http-message": "~0.5.0"
-            },
-            "require-dev": {
-                "cakephp/cakephp": "^2.5.7",
-                "ext-curl": "*",
-                "guzzle/guzzle": "^3.9.2",
-                "guzzlehttp/guzzle": ">=4.1.4,<6.0.0",
-                "guzzlehttp/streams": ">=1.5.0,<4.0.0",
-                "kriswallsmith/buzz": "~0.13",
-                "nategood/httpful": "^0.2.17",
-                "phpunit/phpunit": "~4.0",
-                "phpunit/phpunit-mock-objects": "dev-matcher-verify as 2.3.x-dev",
-                "psr/log": "~1.0",
-                "react/dns": "^0.4.1",
-                "react/http-client": "~0.4",
-                "satooshi/php-coveralls": "~0.6",
-                "symfony/event-dispatcher": "~2.0",
-                "zendframework/zendframework": "~2.4@dev",
-                "zendframework/zendframework1": "^1.12.9"
-            },
-            "suggest": {
-                "ext-curl": "Allows you to use the cURL adapter",
-                "guzzle/guzzle": "Allows you to use the Guzzle 3 adapter",
-                "guzzlehttp/guzzle": "Allows you to use the Guzzle 4 adapter",
-                "kriswallsmith/buzz": "Allows you to use the Buzz adapter",
-                "nategood/httpful": "Allows you to use the httpful adapter",
-                "psr/log": "Allows you to use the logger event subscriber",
-                "symfony/event-dispatcher": "Allows you to use the event lifecycle",
-                "symfony/stopwatch": "Allows you to use the stopwatch http adapter and event subscriber",
-                "zendframework/zend-http": "Allows you to use the Zend 2 adapter",
-                "zendframework/zendframework1": "Allows you to use the Zend 1 adapter"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Ivory\\HttpAdapter\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Eric GELOEN",
-                    "email": "geloen.eric@gmail.com"
-                }
-            ],
-            "description": "Issue HTTP request for PHP 5.3+.",
-            "keywords": [
-                "http",
-                "http-adapter",
-                "http-client",
                 "psr-7"
             ],
-            "time": "2015-02-10 20:13:41"
+            "time": "2015-06-25 14:21:40"
+        },
+        {
+            "name": "aura/payload",
+            "version": "3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Payload.git",
+                "reference": "aa482409f91d44e72316afab3683cbb16f0d91df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Payload/zipball/aa482409f91d44e72316afab3683cbb16f0d91df",
+                "reference": "aa482409f91d44e72316afab3683cbb16f0d91df",
+                "shasum": ""
+            },
+            "require": {
+                "aura/payload-interface": "~3.0",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Payload\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Payload Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Payload/contributors"
+                }
+            ],
+            "description": "A Domain Payload implementation.",
+            "homepage": "https://github.com/auraphp/Aura.Payload",
+            "keywords": [
+                "ddd",
+                "domain",
+                "payload"
+            ],
+            "time": "2015-08-01 19:02:35"
+        },
+        {
+            "name": "aura/payload-interface",
+            "version": "3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Payload_Interface.git",
+                "reference": "301d4102134c758be04faf655b636c533141324c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Payload_Interface/zipball/301d4102134c758be04faf655b636c533141324c",
+                "reference": "301d4102134c758be04faf655b636c533141324c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Payload_Interface\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Payload_Interface Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Payload_Interface/contributors"
+                }
+            ],
+            "description": "An interface package for Domain Payload implementations.",
+            "homepage": "https://github.com/auraphp/Aura.Payload_Interface",
+            "keywords": [
+                "ddd",
+                "domain",
+                "payload"
+            ],
+            "time": "2015-07-14 23:43:40"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "5.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "475b29ccd411f2fa8a408e64576418728c032cfa"
+                "reference": "6692db3cda013e8357330243c33fe1838d0ea6f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/475b29ccd411f2fa8a408e64576418728c032cfa",
-                "reference": "475b29ccd411f2fa8a408e64576418728c032cfa",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/6692db3cda013e8357330243c33fe1838d0ea6f5",
+                "reference": "6692db3cda013e8357330243c33fe1838d0ea6f5",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/ringphp": "~1.0",
-                "php": ">=5.4.0"
+                "guzzlehttp/promises": "~1.0",
+                "guzzlehttp/psr7": "~1.1",
+                "php": ">=5.5.0"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -171,10 +165,13 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "6.0-dev"
                 }
             },
             "autoload": {
+                "files": [
+                    "src/functions_include.php"
+                ],
                 "psr-4": {
                     "GuzzleHttp\\": "src/"
                 }
@@ -190,7 +187,7 @@
                     "homepage": "https://github.com/mtdowling"
                 }
             ],
-            "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+            "description": "Guzzle is a PHP HTTP client library",
             "homepage": "http://guzzlephp.org/",
             "keywords": [
                 "client",
@@ -201,33 +198,27 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-01-28 01:03:29"
+            "time": "2015-07-30 04:48:33"
         },
         {
-            "name": "guzzlehttp/ringphp",
+            "name": "guzzlehttp/promises",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/RingPHP.git",
-                "reference": "2498ee848cd01639aecdcf3d5a257bace8665b7c"
+                "url": "https://github.com/guzzle/promises.git",
+                "reference": "f596be052ef429a16b2f640812fcf84392dd38f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/2498ee848cd01639aecdcf3d5a257bace8665b7c",
-                "reference": "2498ee848cd01639aecdcf3d5a257bace8665b7c",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/f596be052ef429a16b2f640812fcf84392dd38f7",
+                "reference": "f596be052ef429a16b2f640812fcf84392dd38f7",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/streams": "~3.0",
-                "php": ">=5.4.0",
-                "react/promise": "~2.0"
+                "php": ">=5.5.0"
             },
             "require-dev": {
-                "ext-curl": "*",
                 "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "ext-curl": "Guzzle will use specific adapters if cURL is present"
             },
             "type": "library",
             "extra": {
@@ -237,8 +228,11 @@
             },
             "autoload": {
                 "psr-4": {
-                    "GuzzleHttp\\Ring\\": "src/"
-                }
+                    "GuzzleHttp\\Promise\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -251,25 +245,32 @@
                     "homepage": "https://github.com/mtdowling"
                 }
             ],
-            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
-            "time": "2015-05-01 04:57:09"
+            "description": "Guzzle promises library",
+            "keywords": [
+                "promise"
+            ],
+            "time": "2015-06-30 16:39:54"
         },
         {
-            "name": "guzzlehttp/streams",
-            "version": "dev-master",
+            "name": "guzzlehttp/psr7",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/guzzle/streams.git",
-                "reference": "d1f8a6c55f0f753cfd6f6755856473eb02cedb19"
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "af0e1758de355eb113917ad79c3c0e3604bce4bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/streams/zipball/d1f8a6c55f0f753cfd6f6755856473eb02cedb19",
-                "reference": "d1f8a6c55f0f753cfd6f6755856473eb02cedb19",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/af0e1758de355eb113917ad79c3c0e3604bce4bd",
+                "reference": "af0e1758de355eb113917ad79c3c0e3604bce4bd",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
@@ -277,13 +278,16 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "GuzzleHttp\\Stream\\": "src/"
-                }
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -296,13 +300,14 @@
                     "homepage": "https://github.com/mtdowling"
                 }
             ],
-            "description": "Provides a simple abstraction over streams of data",
-            "homepage": "http://guzzlephp.org/",
+            "description": "PSR-7 message implementation",
             "keywords": [
-                "Guzzle",
-                "stream"
+                "http",
+                "message",
+                "stream",
+                "uri"
             ],
-            "time": "2015-01-22 00:01:34"
+            "time": "2015-06-24 19:55:15"
         },
         {
             "name": "ircmaxell/random-lib",
@@ -405,93 +410,29 @@
             "time": "2015-03-20 14:31:23"
         },
         {
-            "name": "league/container",
-            "version": "1.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/container.git",
-                "reference": "7e6c17fe48f76f3b97aeca70dc29c3f3c7c88d15"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/container/zipball/7e6c17fe48f76f3b97aeca70dc29c3f3c7c88d15",
-                "reference": "7e6c17fe48f76f3b97aeca70dc29c3f3c7c88d15",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "replace": {
-                "orno/di": "~2.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev",
-                    "dev-1.x": "1.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Container\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Phil Bennett",
-                    "email": "philipobenito@gmail.com",
-                    "homepage": "http://philipobenito.github.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A fast and intuitive dependency injection container.",
-            "homepage": "https://github.com/thephpleague/container",
-            "keywords": [
-                "container",
-                "dependency",
-                "di",
-                "injection",
-                "league"
-            ],
-            "time": "2015-04-05 17:14:48"
-        },
-        {
-            "name": "league/event",
+            "name": "josegonzalez/dotenv",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/thephpleague/event.git",
-                "reference": "d8d880d032d608134911eaccc116d55eb089d230"
+                "url": "https://github.com/josegonzalez/php-dotenv.git",
+                "reference": "e25e54a87180a46c473fd5a1bb5d8c2fa2699a19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/event/zipball/d8d880d032d608134911eaccc116d55eb089d230",
-                "reference": "d8d880d032d608134911eaccc116d55eb089d230",
+                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/e25e54a87180a46c473fd5a1bb5d8c2fa2699a19",
+                "reference": "e25e54a87180a46c473fd5a1bb5d8c2fa2699a19",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
-                "phpspec/phpspec": "~2.0.0"
+                "php": ">=5.3.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2-dev"
-                }
-            },
             "autoload": {
-                "psr-4": {
-                    "League\\Event\\": "src/"
+                "psr-0": {
+                    "josegonzalez\\Dotenv": [
+                        "src",
+                        "tests"
+                    ]
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -500,37 +441,40 @@
             ],
             "authors": [
                 {
-                    "name": "Frank de Jonge",
-                    "email": "info@frenky.net"
+                    "name": "Jose Diaz-Gonzalez",
+                    "email": "dotenv@josegonzalez.com",
+                    "homepage": "http://josediazgonzalez.com",
+                    "role": "Maintainer"
                 }
             ],
-            "description": "Event package",
+            "description": "dotenv file parsing for PHP",
+            "homepage": "https://github.com/josegonzalez/php-dotenv",
             "keywords": [
-                "emitter",
-                "event",
-                "listener"
+                "configuration",
+                "dotenv",
+                "php"
             ],
-            "time": "2015-05-10 10:15:08"
+            "time": "2015-06-05 06:04:53"
         },
         {
             "name": "league/oauth2-client",
-            "version": "1.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "9ba7b832d24f344f8f1e638c2e9454d2fac07c12"
+                "reference": "97f3eb235ae4bb3adf06d93ef2995cfc727a3821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/9ba7b832d24f344f8f1e638c2e9454d2fac07c12",
-                "reference": "9ba7b832d24f344f8f1e638c2e9454d2fac07c12",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/97f3eb235ae4bb3adf06d93ef2995cfc727a3821",
+                "reference": "97f3eb235ae4bb3adf06d93ef2995cfc727a3821",
                 "shasum": ""
             },
             "require": {
-                "egeloen/http-adapter": "0.6.*",
                 "ext-curl": "*",
+                "guzzlehttp/guzzle": "~6.0",
                 "ircmaxell/random-lib": "~1.1",
-                "php": ">=5.4.0"
+                "php": ">=5.5.0"
             },
             "require-dev": {
                 "jakub-onderka/php-parallel-lint": "0.8.*",
@@ -542,7 +486,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.10.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -573,76 +517,24 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2015-05-11 19:00:09"
-        },
-        {
-            "name": "league/oauth2-facebook",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth2-facebook.git",
-                "reference": "e40f9649bb9f2c20b55f153c617a164a6e8216b7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-facebook/zipball/e40f9649bb9f2c20b55f153c617a164a6e8216b7",
-                "reference": "e40f9649bb9f2c20b55f153c617a164a6e8216b7",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": "~1.0@dev",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sammy Kaye Powers",
-                    "email": "me@sammyk.me",
-                    "homepage": "http://www.sammyk.me"
-                }
-            ],
-            "description": "Facebook OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-            "keywords": [
-                "Authentication",
-                "authorization",
-                "client",
-                "facebook",
-                "oauth",
-                "oauth2"
-            ],
-            "time": "2015-04-21 04:09:10"
+            "time": "2015-07-31 19:58:08"
         },
         {
             "name": "league/oauth2-google",
-            "version": "dev-master",
+            "version": "1.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-google.git",
-                "reference": "13add491678580ecc10ca3b8bc4c856556aea76b"
+                "reference": "1a3c0e69675a334972892bb80c84219ab86fb4a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/13add491678580ecc10ca3b8bc4c856556aea76b",
-                "reference": "13add491678580ecc10ca3b8bc4c856556aea76b",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-google/zipball/1a3c0e69675a334972892bb80c84219ab86fb4a6",
+                "reference": "1a3c0e69675a334972892bb80c84219ab86fb4a6",
                 "shasum": ""
             },
             "require": {
-                "league/oauth2-client": "~1.0@dev",
-                "php": ">=5.4.0"
+                "league/oauth2-client": "~1.0"
             },
             "require-dev": {
                 "mockery/mockery": "~0.9",
@@ -675,20 +567,20 @@
                 "oauth",
                 "oauth2"
             ],
-            "time": "2015-05-12 01:51:18"
+            "time": "2015-08-03 17:52:17"
         },
         {
             "name": "league/plates",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/plates.git",
-                "reference": "c39d8fbcbeb07a0948d5e1cf8d78c6e1ef3e81a8"
+                "reference": "2d8569e9f140a70d6a05db38006926f7547cb802"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/plates/zipball/c39d8fbcbeb07a0948d5e1cf8d78c6e1ef3e81a8",
-                "reference": "c39d8fbcbeb07a0948d5e1cf8d78c6e1ef3e81a8",
+                "url": "https://api.github.com/repos/thephpleague/plates/zipball/2d8569e9f140a70d6a05db38006926f7547cb802",
+                "reference": "2d8569e9f140a70d6a05db38006926f7547cb802",
                 "shasum": ""
             },
             "require-dev": {
@@ -727,65 +619,7 @@
                 "templating",
                 "views"
             ],
-            "time": "2014-10-21 12:06:12"
-        },
-        {
-            "name": "league/route",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/route.git",
-                "reference": "06b0b3cb203f329875ad534d0f8a049d23767005"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/route/zipball/06b0b3cb203f329875ad534d0f8a049d23767005",
-                "reference": "06b0b3cb203f329875ad534d0f8a049d23767005",
-                "shasum": ""
-            },
-            "require": {
-                "league/container": "~1.0",
-                "nikic/fast-route": "~0.3",
-                "php": ">=5.4.0",
-                "symfony/http-foundation": "~2.6"
-            },
-            "replace": {
-                "orno/http": "~1.0",
-                "orno/route": "~1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Route\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Phil Bennett",
-                    "email": "philipobenito@gmail.com",
-                    "homepage": "http://philipobenito.github.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A fast routing and dispatch package built on top of FastRoute.",
-            "homepage": "https://github.com/thephpleague/route",
-            "keywords": [
-                "league",
-                "route"
-            ],
-            "time": "2015-02-24 18:34:01"
+            "time": "2015-07-09 02:14:40"
         },
         {
             "name": "monolog/monolog",
@@ -793,12 +627,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bf2bff61743f20a13dc46ff1e3bbd0f19c997d2b"
+                "reference": "d93492fb60e05e67522f38796b54b9c5205bba90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bf2bff61743f20a13dc46ff1e3bbd0f19c997d2b",
-                "reference": "bf2bff61743f20a13dc46ff1e3bbd0f19c997d2b",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/d93492fb60e05e67522f38796b54b9c5205bba90",
+                "reference": "d93492fb60e05e67522f38796b54b9c5205bba90",
                 "shasum": ""
             },
             "require": {
@@ -809,13 +643,14 @@
                 "psr/log-implementation": "1.0.0"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "~2.4, >2.4.8",
+                "aws/aws-sdk-php": "^2.4.9",
                 "doctrine/couchdb": "~1.0@dev",
                 "graylog2/gelf-php": "~1.0",
-                "php-console/php-console": "~3.1, >3.1.2",
-                "phpunit/phpunit": "~4.0",
-                "raven/raven": "~0.5",
-                "ruflin/elastica": "0.90.*",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "raven/raven": "~0.8",
+                "ruflin/elastica": ">=0.90 <3.0",
                 "swiftmailer/swiftmailer": "~5.3",
                 "videlalvaro/php-amqplib": "~2.4"
             },
@@ -834,7 +669,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.13.x-dev"
+                    "dev-master": "1.15.x-dev"
                 }
             },
             "autoload": {
@@ -860,7 +695,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-05-11 14:51:05"
+            "time": "2015-07-31 10:19:40"
         },
         {
             "name": "nikic/fast-route",
@@ -907,17 +742,20 @@
         },
         {
             "name": "psr/http-message",
-            "version": "0.5.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "18619eee10ecf266bafe048e5a2922fa20938498"
+                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/18619eee10ecf266bafe048e5a2922fa20938498",
-                "reference": "18619eee10ecf266bafe048e5a2922fa20938498",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
+                "reference": "85d63699f0dbedb190bbd4b0d2b9dc707ea4c298",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
@@ -927,7 +765,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Psr\\Http\\Message\\": "src"
+                    "Psr\\Http\\Message\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -949,7 +787,7 @@
                 "request",
                 "response"
             ],
-            "time": "2014-11-04 14:03:01"
+            "time": "2015-05-04 20:22:00"
         },
         {
             "name": "psr/log",
@@ -957,13 +795,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "bf2c13de4300e227d7b2fd08027673a79c519987"
+                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/bf2c13de4300e227d7b2fd08027673a79c519987",
-                "reference": "bf2c13de4300e227d7b2fd08027673a79c519987",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/9e45edca52cc9c954680072c93e621f8b71fab26",
+                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
@@ -992,92 +833,33 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2015-03-26 14:39:45"
+            "time": "2015-06-02 13:48:41"
         },
         {
-            "name": "react/promise",
-            "version": "v2.2.0",
+            "name": "rdlowrey/auryn",
+            "version": "v0.15.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/reactphp/promise.git",
-                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef"
+                "url": "https://github.com/rdlowrey/auryn.git",
+                "reference": "d0d875868e1d7d241983c88252c07965a65224c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
-                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
+                "url": "https://api.github.com/repos/rdlowrey/auryn/zipball/d0d875868e1d7d241983c88252c07965a65224c1",
+                "reference": "d0d875868e1d7d241983c88252c07965a65224c1",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "React\\Promise\\": "src/"
-                },
-                "files": [
-                    "src/functions_include.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Sorgalla",
-                    "email": "jsorgalla@googlemail.com"
-                }
-            ],
-            "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2014-12-30 13:32:42"
-        },
-        {
-            "name": "symfony/debug",
-            "version": "2.8.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Debug.git",
-                "reference": "61caba67a55d267d3b613af80bfe3ded6c8631e5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/61caba67a55d267d3b613af80bfe3ded6c8631e5",
-                "reference": "61caba67a55d267d3b613af80bfe3ded6c8631e5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "psr/log": "~1.0"
-            },
-            "conflict": {
-                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+                "php": ">=5.3.0"
             },
             "require-dev": {
-                "symfony/class-loader": "~2.2|~3.0.0",
-                "symfony/http-foundation": "~2.1|~3.0.0",
-                "symfony/http-kernel": "~2.3.24|~2.5.9|~2.6,>=2.6.2|~3.0.0",
-                "symfony/phpunit-bridge": "~2.7|~3.0.0"
-            },
-            "suggest": {
-                "symfony/http-foundation": "",
-                "symfony/http-kernel": ""
+                "athletic/athletic": "~0.1",
+                "phpunit/phpunit": "~4.5"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Symfony\\Component\\Debug\\": ""
+                    "Auryn\\": "lib/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1086,271 +868,265 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
+                    "name": "Dan Ackroyd",
+                    "email": "Danack@basereality.com",
+                    "homepage": "http://www.basereality.com",
+                    "role": "Developer"
                 },
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony Debug Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-04-24 15:39:02"
-        },
-        {
-            "name": "symfony/event-dispatcher",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "b42ba1e35bf95eeb87c5ecb9e3141a6e3c7c65b3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/b42ba1e35bf95eeb87c5ecb9e3141a6e3c7c65b3",
-                "reference": "b42ba1e35bf95eeb87c5ecb9e3141a6e3c7c65b3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~2.8|~3.0",
-                "symfony/dependency-injection": "~2.8|~3.0",
-                "symfony/expression-language": "~2.8|~3.0",
-                "symfony/phpunit-bridge": "~2.8|~3.0",
-                "symfony/stopwatch": "~2.8|~3.0"
-            },
-            "suggest": {
-                "symfony/dependency-injection": "",
-                "symfony/http-kernel": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@gmail.com",
+                    "role": "Creator / Main Developer"
                 },
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "name": "Levi Morrison",
+                    "email": "levim@php.net",
+                    "homepage": "http://morrisonlevi.github.com/",
+                    "role": "Developer"
                 }
             ],
-            "description": "Symfony EventDispatcher Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-04-24 07:12:41"
-        },
-        {
-            "name": "symfony/http-foundation",
-            "version": "2.8.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "6e4144be6747b89ff6375e2d237db4ee808c21c4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/6e4144be6747b89ff6375e2d237db4ee808c21c4",
-                "reference": "6e4144be6747b89ff6375e2d237db4ee808c21c4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/expression-language": "~2.4|~3.0.0",
-                "symfony/phpunit-bridge": "~2.7|~3.0.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\HttpFoundation\\": ""
-                },
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony HttpFoundation Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-04-24 07:03:44"
-        },
-        {
-            "name": "symfony/http-kernel",
-            "version": "2.8.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "17de89b04a78cb28bb0f48238795cf50fea1dedd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/17de89b04a78cb28bb0f48238795cf50fea1dedd",
-                "reference": "17de89b04a78cb28bb0f48238795cf50fea1dedd",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9",
-                "psr/log": "~1.0",
-                "symfony/debug": "~2.6,>=2.6.2",
-                "symfony/event-dispatcher": "~2.5.9|~2.6,>=2.6.2|~3.0.0",
-                "symfony/http-foundation": "~2.5,>=2.5.4|~3.0.0"
-            },
-            "conflict": {
-                "symfony/config": "<2.7"
-            },
-            "require-dev": {
-                "symfony/browser-kit": "~2.3|~3.0.0",
-                "symfony/class-loader": "~2.1|~3.0.0",
-                "symfony/config": "~2.7",
-                "symfony/console": "~2.3|~3.0.0",
-                "symfony/css-selector": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/dependency-injection": "~2.2|~3.0.0",
-                "symfony/dom-crawler": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/expression-language": "~2.4|~3.0.0",
-                "symfony/finder": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/phpunit-bridge": "~2.7|~3.0.0",
-                "symfony/process": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/routing": "~2.2|~3.0.0",
-                "symfony/stopwatch": "~2.3|~3.0.0",
-                "symfony/templating": "~2.2|~3.0.0",
-                "symfony/translation": "~2.0,>=2.0.5|~3.0.0",
-                "symfony/var-dumper": "~2.6|~3.0.0"
-            },
-            "suggest": {
-                "symfony/browser-kit": "",
-                "symfony/class-loader": "",
-                "symfony/config": "",
-                "symfony/console": "",
-                "symfony/dependency-injection": "",
-                "symfony/finder": "",
-                "symfony/var-dumper": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\HttpKernel\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony HttpKernel Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-04-24 16:45:00"
-        },
-        {
-            "name": "vlucas/phpdotenv",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "ae388efe53a2c352ddd270f4d316bad58952b8e3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/ae388efe53a2c352ddd270f4d316bad58952b8e3",
-                "reference": "ae388efe53a2c352ddd270f4d316bad58952b8e3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Dotenv": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD"
-            ],
-            "authors": [
-                {
-                    "name": "Vance Lucas",
-                    "email": "vance@vancelucas.com",
-                    "homepage": "http://www.vancelucas.com"
-                }
-            ],
-            "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-            "homepage": "http://github.com/vlucas/phpdotenv",
+            "description": "Auryn is a dependency injector for bootstrapping object-oriented PHP applications.",
+            "homepage": "https://github.com/rdlowrey/Auryn",
             "keywords": [
-                "dotenv",
-                "env",
-                "environment"
+                "dependency injection",
+                "dic",
+                "ioc"
             ],
-            "time": "2015-02-19 20:37:05"
+            "time": "2015-05-17 18:29:19"
+        },
+        {
+            "name": "relay/middleware",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relayphp/Relay.Middleware.git",
+                "reference": "952cdcec622dee2d7ef9cf6970f37dbc5bcd255b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relayphp/Relay.Middleware/zipball/952cdcec622dee2d7ef9cf6970f37dbc5bcd255b",
+                "reference": "952cdcec622dee2d7ef9cf6970f37dbc5bcd255b",
+                "shasum": ""
+            },
+            "require": {
+                "psr/http-message": "~1.0"
+            },
+            "require-dev": {
+                "zendframework/zend-diactoros": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Relay\\Middleware\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Basic Relay-compatible middleware decorators.",
+            "time": "2015-07-23 14:13:15"
+        },
+        {
+            "name": "relay/relay",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/relayphp/Relay.Relay.git",
+                "reference": "e622e5efeeacd3dcc87113cfadcdb927e9c7f456"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/relayphp/Relay.Relay/zipball/e622e5efeeacd3dcc87113cfadcdb927e9c7f456",
+                "reference": "e622e5efeeacd3dcc87113cfadcdb927e9c7f456",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "psr/http-message": "~1.0"
+            },
+            "require-dev": {
+                "zendframework/zend-diactoros": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Relay\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Relay.Relay Contributors",
+                    "homepage": "https://github.com/relayphp/Relay.Relay/contributors"
+                }
+            ],
+            "description": "A PSR-7 middleware dispatcher.",
+            "homepage": "https://github.com/relayphp/Relay.Relay",
+            "keywords": [
+                "middleware",
+                "psr-7"
+            ],
+            "time": "2015-06-25 20:44:22"
+        },
+        {
+            "name": "sparkphp/adr",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sparkphp/adr.git",
+                "reference": "7f323448f047e5ec88ead1fa883649917eb8c38c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sparkphp/adr/zipball/7f323448f047e5ec88ead1fa883649917eb8c38c",
+                "reference": "7f323448f047e5ec88ead1fa883649917eb8c38c",
+                "shasum": ""
+            },
+            "require": {
+                "aura/payload-interface": "3.*@dev",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spark\\Adr\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Woody Gilk",
+                    "email": "woody.gilk@gmail.com"
+                },
+                {
+                    "name": "Daniel Olfelt",
+                    "email": "dolfelt@gmail.com"
+                }
+            ],
+            "description": "Intefaces for Action Domain Responder pattern",
+            "time": "2015-06-04 15:25:31"
+        },
+        {
+            "name": "sparkphp/spark",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sparkphp/Spark.git",
+                "reference": "269aeaf375adde529674af360237065a44965bd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sparkphp/Spark/zipball/269aeaf375adde529674af360237065a44965bd1",
+                "reference": "269aeaf375adde529674af360237065a44965bd1",
+                "shasum": ""
+            },
+            "require": {
+                "arbiter/arbiter": "~1.0",
+                "aura/payload": "3.*@dev",
+                "monolog/monolog": "~1.13",
+                "nikic/fast-route": "0.4.*",
+                "php": ">=5.5.0",
+                "rdlowrey/auryn": "0.15.*",
+                "relay/middleware": "~1.0",
+                "relay/relay": "~1.0",
+                "sparkphp/adr": "dev-master",
+                "zendframework/zend-diactoros": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6",
+                "satooshi/php-coveralls": "0.6.1"
+            },
+            "suggest": {
+                "josegonzalez/dotenv": "For environment based configuration loading"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Olfelt",
+                    "email": "dolfelt@gmail.com"
+                },
+                {
+                    "name": "Woody Gilk",
+                    "email": "hello@shadowhand.me"
+                }
+            ],
+            "description": "A tiny framework that can start anything.",
+            "time": "2015-07-28 22:45:26"
+        },
+        {
+            "name": "zendframework/zend-diactoros",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-diactoros.git",
+                "reference": "727f863820d3575d8193ab3a95f99f978324a118"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/727f863820d3575d8193ab3a95f99f978324a118",
+                "reference": "727f863820d3575d8193ab3a95f99f978324a118",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "~1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6",
+                "squizlabs/php_codesniffer": "^2.3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev",
+                    "dev-develop": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Diactoros\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "PSR HTTP Message implementations",
+            "homepage": "https://github.com/zendframework/zend-diactoros",
+            "keywords": [
+                "http",
+                "psr",
+                "psr-7"
+            ],
+            "time": "2015-07-29 20:52:45"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "league/oauth2-facebook": 20,
-        "league/oauth2-google": 20,
-        "vlucas/phpdotenv": 20,
-        "alexbilbie/proton": 20,
+        "sparkphp/spark": 20,
         "league/plates": 20,
-        "guzzlehttp/guzzle": 20
+        "josegonzalez/dotenv": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
