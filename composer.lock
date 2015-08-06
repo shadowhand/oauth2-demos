@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bbef041842d90c7e0c0384734130c71b",
+    "hash": "d7f43ae621a0650a56414dfe389d8dcd",
     "packages": [
         {
             "name": "arbiter/arbiter",
@@ -466,7 +466,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/97f3eb235ae4bb3adf06d93ef2995cfc727a3821",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/0e8acdd0e3eb9774c2da1ef2147221355ef8cb61",
                 "reference": "97f3eb235ae4bb3adf06d93ef2995cfc727a3821",
                 "shasum": ""
             },
@@ -518,6 +518,57 @@
                 "single sign on"
             ],
             "time": "2015-07-31 19:58:08"
+        },
+        {
+            "name": "league/oauth2-facebook",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/oauth2-facebook.git",
+                "reference": "01e747cb21710f151d075654405b8edc3c4d338e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-facebook/zipball/01e747cb21710f151d075654405b8edc3c4d338e",
+                "reference": "01e747cb21710f151d075654405b8edc3c4d338e",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "~1.0@dev",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "League\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sammy Kaye Powers",
+                    "email": "me@sammyk.me",
+                    "homepage": "http://www.sammyk.me"
+                }
+            ],
+            "description": "Facebook OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "Authentication",
+                "authorization",
+                "client",
+                "facebook",
+                "oauth",
+                "oauth2"
+            ],
+            "time": "2015-08-05 19:50:34"
         },
         {
             "name": "league/oauth2-google",
@@ -1023,7 +1074,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sparkphp/Spark/zipball/269aeaf375adde529674af360237065a44965bd1",
+                "url": "https://api.github.com/repos/sparkphp/Spark/zipball/edf01e1bb6e5da276419fea664055fa22a65143d",
                 "reference": "269aeaf375adde529674af360237065a44965bd1",
                 "shasum": ""
             },

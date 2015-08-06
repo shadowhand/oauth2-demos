@@ -15,9 +15,10 @@
         }
     },
     "require": {
+        "josegonzalez/dotenv": "dev-master",
         "league/oauth2-google": "~1.0",
-        "sparkphp/spark": "dev-master",
+        "league/oauth2-facebook": "~1.0",
         "league/plates": "~3.0@dev",
-        "josegonzalez/dotenv": "dev-master"
+        "sparkphp/spark": "dev-master"
     }
 }
