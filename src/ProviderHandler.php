@@ -40,7 +40,6 @@ class ProviderHandler
                 $config['redirectUri'] = (string) $uri;
             }
 
-            $alias = 'League\\OAuth2\\Client\\Provider\\AbstractProvider';
             $class = $config['provider'];
 
             $this->injector->alias(AbstractProvider::class, $class);

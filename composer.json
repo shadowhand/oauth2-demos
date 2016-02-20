@@ -8,17 +8,17 @@
             "email": "woody.gilk@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "League\\OAuth2\\Client\\Demo\\": "src/"
         }
     },
     "require": {
-        "josegonzalez/dotenv": "dev-master",
+        "equip/framework": "~1.0",
+        "josegonzalez/dotenv": "~1.0",
         "league/oauth2-google": "~1.0",
         "league/oauth2-facebook": "~1.0",
-        "league/plates": "~3.0@dev",
-        "sparkphp/spark": "dev-master"
+        "league/plates": "~3.1",
+        "equip/session": "^1.0"
     }
 }

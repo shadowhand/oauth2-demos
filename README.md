@@ -10,4 +10,4 @@ php -S localhost:8000 web/index.php
 open "http://localhost:8000/"
 ```
 
-Built with [Spark](https://github.com/sparkphp/spark). MIT license.
+Built with [Equip](https://github.com/equip/framework). MIT license.

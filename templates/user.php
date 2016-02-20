@@ -3,6 +3,7 @@
 <dl>
     <?php foreach ($details as $key => $value): ?>
     <dt><?= $this->e($key) ?></dt>
-    <dd><?= $this->e($value) ?></dd>
+    <dd><?= $this->e(var_export($value, true)) ?></dd>
     <?php endforeach; ?>
 </dl>
+<p><strong>Would you like to <a href="/logout/<?= $this->e($provider) ?>">logout</a> or <a href="/">login to another provider</a>?</strong></p>

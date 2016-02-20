@@ -2,25 +2,10 @@
 
 namespace League\OAuth2\Client\Demo\Domain;
 
-use League\OAuth2\Client\Demo\Session;
-use League\OAuth2\Client\Provider\AbstractProvider;
+use Equip\Payload;
 
-use Aura\Payload\Payload;
-use Spark\Adr\DomainInterface;
-
-class Login implements DomainInterface
+class Login extends AbstractProviderDomain
 {
-    private $provider;
-    private $session;
-
-    public function __construct(
-        AbstractProvider $provider,
-        Session          $session
-    ) {
-        $this->provider = $provider;
-        $this->session  = $session;
-    }
-
     private function isOkay(array $input)
     {
         return empty($input['error'])
@@ -36,27 +21,14 @@ class Login implements DomainInterface
 
     public function __invoke(array $input)
     {
-        $payload = new Payload;
-
         if (!$this->isOkay($input)) {
-            return $payload
-                ->setExtras([
-                    'template' => 'error',
-                ])
-                ->setStatus(Payload::NOT_AUTHENTICATED)
-                ->setInput($input);
+            return $this->error($input);
         }
 
         if (!$this->isValidState($input)) {
-            return $payload
-                ->setExtras([
-                    'template' => 'error',
-                ])
-                ->setStatus(Payload::NOT_VALID)
-                ->setInput($input)
-                ->setMessages([
-                    'error' => 'Invalid state detected',
-                ]);
+            return $this->error($input, [
+                'error' => 'Invalid state detected',
+            ]);
         }
 
         $provider = $input['provider'];
@@ -64,10 +36,12 @@ class Login implements DomainInterface
         $token    = $this->provider->getAccessToken('authorization_code', compact('code'));
 
         // Store the token to later actions
-        $this->session->merge('tokens', [$provider => $token]);
+        $this->storeToken($provider, $token);
 
-        return $payload
-            ->setStatus(Payload::AUTHENTICATED)
-            ->setOutput(compact('provider'));
+        return $this->payload()
+            ->withStatus(Payload::STATUS_FOUND)
+            ->withMessages([
+                'redirect' => '/user/' . $provider,
+            ]);
     }
 }

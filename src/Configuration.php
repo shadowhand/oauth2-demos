@@ -3,26 +3,48 @@
 namespace League\OAuth2\Client\Demo;
 
 use Auryn\Injector;
+use Equip\Env;
+use Equip\Configuration\ConfigurationInterface;
+use League\Plates\Engine;
 
-class Configuration
+class Configuration implements ConfigurationInterface
 {
-    public function apply(Injector $injector, array $env)
-    {
-        $this->applyProviderConfig($injector, $env);
+    /**
+     * @var Env
+     */
+    private $env;
 
-        $injector->define('League\Plates\Engine', [':directory' => __DIR__ . '/../templates']);
+    public function __construct(Env $env)
+    {
+        $this->env = $env;
     }
 
-    private function applyProviderConfig(Injector $injector, array $env)
+    public function apply(Injector $injector)
+    {
+        $injector->define(Engine::class, [
+            ':directory' => __DIR__ . '/../templates',
+        ]);
+
+        $config = $this->getProviderConfig();
+
+        $injector->define(ProviderHandler::class, [
+            ':injector' => $injector,
+            ':config' => $config,
+        ]);
+
+        $injector->share($config);
+    }
+
+    private function getProviderConfig()
     {
         $config = [];
-        foreach ($env as $key => $value) {
+        foreach ($this->env as $key => $value) {
             list($provider, $key) = explode('_', strtolower($key), 2);
             $key = $this->toCamelCase($key);
             $config[$provider][$key] = $value;
         }
 
-        $injector->define(__NAMESPACE__ . '\\ProviderConfig', [':config' => $config]);
+        return new ProviderConfig($config);
     }
 
     private function toCamelCase($string)

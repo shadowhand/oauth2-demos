@@ -2,20 +2,18 @@
 
 namespace League\OAuth2\Client\Demo\Domain;
 
+use Equip\Payload;
+use Equip\SessionInterface;
 use League\OAuth2\Client\Demo\ProviderConfig;
-use League\OAuth2\Client\Demo\Session;
 
-use Aura\Payload\Payload;
-use Spark\Adr\DomainInterface;
-
-class Index implements DomainInterface
+class Index extends AbstractDomain
 {
     private $config;
     private $session;
 
     public function __construct(
         ProviderConfig $config,
-        Session        $session
+        SessionInterface $session
     ) {
         $this->config  = $config;
         $this->session = $session;
@@ -36,9 +34,11 @@ class Index implements DomainInterface
     {
         $providers = $this->providers();
 
-        return (new Payload)
-            ->setStatus(Payload::SUCCESS)
-            ->setExtras(['template' => 'index'])
-            ->setOutput(compact('providers'));
+        return $this->payload()
+            ->withStatus(Payload::STATUS_OK)
+            ->withOutput([
+                'template' => 'index',
+                'providers' => $providers,
+            ]);
     }
 }
