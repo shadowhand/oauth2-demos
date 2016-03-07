@@ -15,10 +15,11 @@
     },
     "require": {
         "equip/framework": "~1.0",
+        "equip/session": "^1.0",
         "josegonzalez/dotenv": "~1.0",
-        "league/oauth2-google": "~1.0",
         "league/oauth2-facebook": "~1.0",
+        "league/oauth2-google": "~1.0",
         "league/plates": "~3.1",
-        "equip/session": "^1.0"
+        "shadowhand/oauth2-untappd": "^0.2.0"
     }
 }

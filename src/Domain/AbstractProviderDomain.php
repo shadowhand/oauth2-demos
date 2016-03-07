@@ -3,19 +3,23 @@
 namespace League\OAuth2\Client\Demo\Domain;
 
 use Equip\SessionInterface;
+use League\OAuth2\Client\Demo\ProviderConfig;
 use League\OAuth2\Client\Provider\AbstractProvider;
 
 abstract class AbstractProviderDomain extends AbstractDomain
 {
+    protected $config;
     protected $provider;
     protected $session;
 
     public function __construct(
         AbstractProvider $provider,
+        ProviderConfig $config,
         SessionInterface $session
     ) {
         $this->provider = $provider;
-        $this->session  = $session;
+        $this->config = $config;
+        $this->session = $session;
     }
 
     protected function storeToken($provider, $token)

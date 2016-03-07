@@ -14,6 +14,11 @@ class Login extends AbstractProviderDomain
 
     private function isValidState(array $input)
     {
+        $config = $this->config[$input['provider']];
+        if (!empty($config['noState'])) {
+            return true;
+        }
+
         return !empty($input['state'])
             && $this->session->has('state')
             && $this->session->get('state') === $input['state'];
